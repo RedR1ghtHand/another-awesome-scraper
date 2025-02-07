@@ -30,7 +30,6 @@ def upgrade():
         sa.Column('image_url', sa.String(255)),
         sa.Column('phone', sa.String(20)),
         sa.Column('fax', sa.String(20)),
-        sa.Column('hours_of_operation', sa.JSON),
         sa.Column('bbb_rating', sa.String(2)),
         sa.Column('accredited_since', sa.Date),
         sa.Column('est_date', sa.Date),

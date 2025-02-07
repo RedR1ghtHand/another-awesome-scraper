@@ -18,7 +18,6 @@ class BBBItem(Base, MysqlTimestampsMixin, MysqlPrimaryKeyMixin):
     image_url = Column('image_url', String(255))
     phone = Column('phone', String(20))
     fax = Column('fax', String(20))
-    hours_of_operation = Column('hours_of_operation', JSON)
     bbb_rating = Column('bbb_rating', String(2))
     accredited_since = Column('accredited_since', Date)
     est_date = Column('est_date', Date)
