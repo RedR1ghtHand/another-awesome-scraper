@@ -3,11 +3,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Date, JSON
 from sqlalchemy.dialects.mysql import BIGINT, DECIMAL
 
-from src.python.src.database.models import Base
+from database.models import Base
 from .mixins import MysqlTimestampsMixin, MysqlPrimaryKeyMixin
 
 
-class BBBItem(Base, MysqlTimestampsMixin, MysqlPrimaryKeyMixin):
+class BBBItemModel(Base, MysqlTimestampsMixin, MysqlPrimaryKeyMixin):
     __tablename__ = 'bbb_items'
 
     url = Column('url', String(255), unique=True, nullable=False)

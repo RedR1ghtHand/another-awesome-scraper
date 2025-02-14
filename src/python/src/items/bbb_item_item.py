@@ -1,7 +1,7 @@
 import scrapy
 
 
-class BBBScrapyItem(scrapy.Item):
+class BBBItemItem(scrapy.Item):
     id = scrapy.Field()
     created_at = scrapy.Field()
     updated_at = scrapy.Field()
