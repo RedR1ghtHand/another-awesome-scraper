@@ -7,7 +7,7 @@ from database.models import Base
 from .mixins import MysqlTimestampsMixin, MysqlPrimaryKeyMixin
 
 
-class BBBItemModel(Base, MysqlTimestampsMixin, MysqlPrimaryKeyMixin):
+class BBBItem(Base, MysqlTimestampsMixin, MysqlPrimaryKeyMixin):
     __tablename__ = 'bbb_items'
 
     url = Column('url', String(255), unique=True, nullable=False)

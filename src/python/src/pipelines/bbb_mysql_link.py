@@ -5,7 +5,7 @@ from database.models import BBBLink
 from utils import mysql_connection_string
 
 
-class BBBMysqlLinkPipeline:
+class BBBMysqlLink:
     def __init__(self, db_session):
         self.db_session = db_session
 
@@ -24,7 +24,6 @@ class BBBMysqlLinkPipeline:
 
     def process_item(self, item, spider):
         business_url = item.get('url')
-        # business_url = f"{item.get('url')}/details"
         if business_url:
             try:
                 query = insert(BBBLink.__table__).values(url=business_url)

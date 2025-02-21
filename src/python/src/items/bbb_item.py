@@ -1,7 +1,8 @@
 import scrapy
 
+from rmq.items import RMQItem
 
-class BBBItemItem(scrapy.Item):
+class BBBItem(RMQItem):
     id = scrapy.Field()
     created_at = scrapy.Field()
     updated_at = scrapy.Field()

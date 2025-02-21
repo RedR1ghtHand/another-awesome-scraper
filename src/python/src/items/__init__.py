@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
-from .bbb_item_item import BBBItemItem
-from .bbb_link_item import BBBLinkItem
+from .bbb_item import BBBItem
+from .bbb_link import BBBLink
