@@ -1,13 +1,17 @@
 import scrapy
 
 from rmq.utils import get_import_full_name
-from pipelines import BBBMysqlLinkPipeline
+from pipelines import BBBMysqlLink
 
 
 class BBBSitemapSpider(scrapy.Spider):
-    name = 'bbb_sitemap_spider'
+    """
+    Example of calling this command:
+    scrapy crawl bbb_sitemap
+    """
+    name = 'bbb_sitemap'
     custom_settings = {
-        "ITEM_PIPELINES": {get_import_full_name(BBBMysqlLinkPipeline): 300}
+        "ITEM_PIPELINES": {get_import_full_name(BBBMysqlLink): 300}
     }
 
     allowed_domains = ['bbb.org']
